@@ -1,0 +1,47 @@
+<p>
+    <%= @question.title %>
+</p>
+
+<tr>
+    <% @quesion.tag do |t| %>
+ 	<td><%= t %></td>
+    <% end %>
+<tr>
+
+<p>
+    <%= @question.description %>
+</p>
+
+<p>
+    <%= @question.code %>
+</p>
+
+<button>回答する</button>
+
+<% @question.answers.each do |answer| %>
+    <p>
+	<%= answer.user.icon_url %>
+        <%= answer.user.name %>
+        <%= answer.body %>
+        <button>イイネ！</button>
+        <%= answer.like %>
+        <%= form_for :comments do |f| %>
+	    <p>
+	        <%= f.text_area :body %>
+            </p>
+            <p>
+ 		<%= f.submit %>
+	    </p>
+	<% end %>
+    </p>
+<% end %>
+
+<h2>回答フォーム</h2>
+<%= form_for :answers do |f| %>
+<p>
+    <%= f.text_field :body %>
+</p>
+<p>
+    <%= f.submit '投稿' %>
+</p>
+<% end %>   
