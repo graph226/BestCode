@@ -2,16 +2,16 @@
 
 one:
   body: MyText
-  question_id: 1
+  question_id: 
   like: 1
   user_id: 
-  created_at: 2015-10-18 08:38:12
-  updated_at: 2015-10-18 08:38:12
+  created_at: 2015-10-18 08:40:18
+  updated_at: 2015-10-18 08:40:18
 
 two:
   body: MyText
-  question_id: 1
+  question_id: 
   like: 1
   user_id: 
-  created_at: 2015-10-18 08:38:12
-  updated_at: 2015-10-18 08:38:12
+  created_at: 2015-10-18 08:40:18
+  updated_at: 2015-10-18 08:40:18
