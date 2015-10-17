@@ -1,0 +1,6 @@
+<%= @user.icon_url %>
+<%= @user.name %>
+<%= @user.introduction %>
+
+<%= @user.answers.each do |answer| %>
+    <%= link_to answer.title, answer_path(answer) %>
