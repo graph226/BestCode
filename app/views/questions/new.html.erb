@@ -1,0 +1,32 @@
+<%= form_for :questions do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+  
+  <p>
+    <%= radio_button 'radio', 'index' ,"1" %>Readable!
+    <%= radio_button 'radio', 'index' ,"2" %>Speed!
+    <%= radio_button 'radio', 'index' ,"3" %>行数!
+    <%= radio_button 'radio', 'index' ,"4" %>再利用性!
+  </p>
+
+  <p>
+    <%= f.label :tag %>
+    <%= f.text_field :tag %>
+  </p>
+
+  <p>
+    <%= f.label :code %>
+    <%= f.text_area :code %>
+  </p>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
