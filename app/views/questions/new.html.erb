@@ -10,10 +10,10 @@
   </p>
   
   <p>
-    <%= radio_button 'radio', 'index' ,"1" %>Readable!
-    <%= radio_button 'radio', 'index' ,"2" %>Speed!
-    <%= radio_button 'radio', 'index' ,"3" %>行数!
-    <%= radio_button 'radio', 'index' ,"4" %>再利用性!
+    <%= f.radio_button :theme, 1 %> <%= f.label :theme_1, 'Readable!' %>
+    <%= f.radio_button :theme, 2 %> <%= f.label :theme_2, 'Speed!' %>
+    <%= f.radio_button :theme, 3 %> <%= f.label :theme_3, 'Number of Lines' %>
+    <%= f.radio_button :theme, 4 %> <%= f.label :theme_4, 'Recyclable!' %>
   </p>
 
   <p>
