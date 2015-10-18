@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151017233016) do
+ActiveRecord::Schema.define(version: 20151018002336) do
 
   create_table "answers", force: :cascade do |t|
     t.text     "body"
@@ -35,10 +35,13 @@ ActiveRecord::Schema.define(version: 20151017233016) do
     t.text     "description"
     t.integer  "theme"
     t.text     "code"
+    t.string   "tag"
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  add_index "questions", ["user_id"], name: "index_questions_on_user_id"
 
   create_table "tags", force: :cascade do |t|
     t.string   "name"
