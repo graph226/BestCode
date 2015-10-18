@@ -3,6 +3,14 @@
 # This file loads spring without using Bundler, in order to be fast.
 # It gets overwritten when you run the `spring binstub` command.
 
+module Spring
+  class Env
+    def pidfile_path
+      "#{Rails.root}/tmp/spring/#{application_id}.pid"
+    end
+  end
+end
+
 unless defined?(Spring)
   require "rubygems"
   require "bundler"

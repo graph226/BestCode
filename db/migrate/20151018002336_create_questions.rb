@@ -5,7 +5,8 @@ class CreateQuestions < ActiveRecord::Migration
       t.text :description
       t.integer :theme
       t.text :code
-      t.integer :user_id
+      t.string :tag
+      t.references :user, index: true, foreign_key: true
       t.datetime :created_at
       t.datetime :updated_at
 

@@ -1,49 +1,33 @@
 <%= form_for :questions do |f| %>
-  <p>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </p>
-
-  <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
-  </p>
-<div class="container">
-		<div class="col-md-8">
+<div class="container" style="margin-top: 60px;">
 		  <p>
-		    <%= f.label :title %>
+		    <%= f.label :title ,id:"hoge"%>
 		    <%= f.text_field :title %>
 		  </p>
-		</div>
 		
-		<div class="col-md-10">
+			<div class="form-group">
 		  <p>
 		    <%= f.label :text %><br>
-		    <%= f.text_area :text %>
+		    <%= f.text_area :text, class:"form-control col-md-10" %>
 		  </p>
-		</div>
+			</div>
 	
-		<div class="radio-inline col-md-10">
 	  <p>
 		    <%= f.radio_button :theme, 1 %> <%= f.label :theme_1, 'Readable' %>
 		    <%= f.radio_button :theme, 2 %> <%= f.label :theme_2, 'Speed' %>
 		    <%= f.radio_button :theme, 3 %> <%= f.label :theme_3, 'Number of lines' %>
 		    <%= f.radio_button :theme, 4 %> <%= f.label :theme_4, 'Recyclable' %>
 	  </p>
-		</div>
 	
-	  <p>
-	    <%= f.label :tag %>
-	    <%= f.text_field :tag %>
-	  </p>
+
 	
 	  <p>
 	    <%= f.label :code %>
-	    <%= f.text_area :code %>
+	    <%= f.text_area :code, class:"form-control col-md-10", rows:"10" %>
 	  </p>
 	  
 	  <p>
 	    <%= f.submit %>
 	  </p>
-	</div>
+</div>
 <% end %>
