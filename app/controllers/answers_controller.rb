@@ -22,6 +22,6 @@ class AnswesController < ApplicationController
 
 		private
 		def article_params
-			params.require(:answer).permit(:title);
+			params.require(:answer).permit(:body);
 		end
 end
