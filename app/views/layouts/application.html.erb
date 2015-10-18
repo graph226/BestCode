@@ -2,25 +2,25 @@
 <html>
 <head>
   <title>Anklebsh</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-  <link rel="manifest" href="/manifest.json">
-</head>
-<body>
-<% if notice %>
-	<p class="notice"><%= notice %></p>
-<% end %>
-<% if alert %>
-<p class="alert"><%= alert %></p>
-<% end %>
-<%= render 'layouts/header' %>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+			  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+				  <%= csrf_meta_tags %>
+					  <link rel="manifest" href="/manifest.json">
+						</head>
+						<body>
+						<% if notice %>
+							<p class="notice"><%= notice %></p>
+							<% end %>
+							<% if alert %>
+							<p class="alert"><%= alert %></p>
+							<% end %>
+							<%= render 'layouts/header' %>
 
-<%= yield %>
-<div class="js-curl-command"></div>
-<script src="/config.js"></script>
-<script src="/demo.js"></script>
-<script src="/main.js"></script>
-</body>
-</html>
+							<%= yield %>
+							<div class="js-curl-command"></div>
+							<script src="/config.js"></script>
+							<script src="/demo.js"></script>
+							<script src="/main.js"></script>
+							</body>
+							</html>
