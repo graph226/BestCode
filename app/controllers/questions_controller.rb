@@ -1,7 +1,4 @@
 class QuestionsController < ApplicationController
-    def new
-        # @quesion = Quesions.new
-    end
 
 		def create
 		    @question = Question.new(article_params)
@@ -11,6 +8,9 @@ class QuestionsController < ApplicationController
 				else
 					render 'new'
 				end
+		end
+
+		def new
 		end
 
 		def show
