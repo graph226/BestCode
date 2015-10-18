@@ -5,7 +5,7 @@ class AnswesController < ApplicationController
 		def create
 		    @answer = Answer.new(article_params)
 
-				if @answer.save
+				if @answer.save?
 					redirect_to @answer
 				else
 					render 'new'

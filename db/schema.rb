@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20151018021041) do
   create_table "questions", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
-    t.integer  "theme"
+    t.string   "theme"
     t.text     "code"
     t.string   "tag"
     t.integer  "user_id"
