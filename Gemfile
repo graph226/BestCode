@@ -46,3 +46,7 @@ group :development do
   gem 'spring'
 end
 
+gem 'twitter-bootswatch-rails', '~> 3.1.1'
+gem 'twitter-bootswatch-rails-helpers'
+gem 'execjs'
+gem 'less-rails'
