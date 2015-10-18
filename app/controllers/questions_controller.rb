@@ -1,16 +1,16 @@
 class QuestionsController < ApplicationController
 
+		def new
+		end
+
 		def create
-		    @question = Question.new(article_params)
+		    @question = Question.new(question_params)
 
 				if @question.save
 					redirect_to @question
 				else
 					render 'new'
 				end
-		end
-
-		def new
 		end
 
 		def show
@@ -22,7 +22,7 @@ class QuestionsController < ApplicationController
 		end
 
 		private
-		    def article_params
-				    params.require(:question).permit(:title);
+		    def question_params
+				    params.require(:question).permit(:title, :description, :code, :theme)
 				end
 end

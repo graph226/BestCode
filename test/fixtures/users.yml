@@ -8,8 +8,6 @@ one:
   row_score: 1
   recyclable_score: 1
   general_score: 1
-  created_at: 2015-10-18 10:08:02
-  updated_at: 2015-10-18 10:08:02
 
 two:
   name: MyString
@@ -19,5 +17,3 @@ two:
   row_score: 1
   recyclable_score: 1
   general_score: 1
-  created_at: 2015-10-18 10:08:02
-  updated_at: 2015-10-18 10:08:02
