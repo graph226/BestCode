@@ -1,42 +1,122 @@
-<p>
-    <%= @question.theme %>
-    <%= @question.title %>
-</p>
+<div style="margin-top: 60px"></div>
+<div class="container">
+    <h1>質問ページ</h1>
+    <div class="row">
+        <div class="col-md-8">
+            <ul class="media-list">
+                <li class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-left" src="https://pbs.twimg.com/profile_images/635138131910483969/qubzD1WV.jpg" style="width: 100px; height: 100px">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">RubyOnRailsでブログサービスを作りたいです。</h4>
+                        Rails初心者なのですが、独学でブログサービスを作ってみました。ただ、モデルとコントローラーの作り方が適切かわからないので、皆さんのお手本を教えていただけると助かります。
+                    </div>
+                </li>
+                <hr>
+                <li class="media">
+                    <h4>ソースコード</h4>
+                    <br>
+                    <p>foreach($book_list as $i => $j) {</p>
+                    <p>　echo $i;　// 本の名前</p>
+                    <p>}</p>
+                </li>
+                <hr>
+                <hr>
+            </ul>
+            <div class="popular_tags panel panel-default">
+                <div class="panel-heading">
+                    <h1 class="panel-title">
+                       回答 
+                    </h1>
+                </div>
+                <div class="">
+                    <br>
+                    <p class="">
+                        　$iや$jという表現は何を表しているか、わかりづらいので
+                    </p>
+                    <p>　foreach($book_list as $key => $book) {</p>
+                    <p>　　echo $book;　// 本の名前</p>
+                    <p>　}</p>
+                    <br>
+                    <p class="">
+                       　のように、変数がなんなのかを変数名でわかるようにするといいですね。
+                    </p>
+                    <br>
+                    <a href="" style="float: right";>コメントする　　</a>
+                    <a href="" style="float: right;">いいね　</a>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <div style="margin-bottom: 100px"></div>
+        </div>
+        <div class="col-md-4">
+            <div class="popular_tags panel panel-default">
+                <div class="panel-heading">
+                    <h1 class="panel-title">
+                        人気のタグ
+                    </h1>
+                </div>
+                <div class="list-group">
+                    <a class="list-group-item" href="">#リーダブル</a>
+                    <a class="list-group-item" href="">#再利用性</a>
+                    <a class="list-group-item" href="">#php</a>
+                    <a class="list-group-item" href="">#ruby</a>
+                </div>
+            </div>
+            <div class="user_ranking panel panel-default">
+                <div class="panel-heading">
+                    <h1 class="panel-title">
+                        ユーザーランキング
+                    </h1>
+                </div>
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab1" data-toggle="tab" aria-expanded="true">総合</a></li>
+                    <li><a href="#tab2" data-toggle="tab" aria-expanded="false">可読性</a></li>
+                    <li><a href="#tab3" data-toggle="tab" aria-expanded="false">スピード</a></li>
+                    <li><a href="#tab4" data-toggle="tab" aria-expanded="false">再利用性</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="tab1">
+                        <div class="list-group">
+                            <a class="list-group-item" href="/user/1">1位 わんわん</a>
+                            <a class="list-group-item" href="">2位 むら</a>
+                            <a class="list-group-item" href="">3位 ひかるちゃん</a>
+                            <a class="list-group-item" href="">4位 桑古</a>
+                            <a class="list-group-item" href="">5位 藤本</a>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab2">
+                        <div class="list-group">
+                            <a class="list-group-item" href="">1位 岩槻さん</a>
+                            <a class="list-group-item" href="">2位 近藤さん</a>
+                            <a class="list-group-item" href="">3位 寺尾さん</a>
+                            <a class="list-group-item" href="">4位 仙石さん</a>
+                            <a class="list-group-item" href="">5位 小羽田</a>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab3">
+                        <div class="list-group">
+                            <a class="list-group-item" href="">1位 TOM</a>
+                            <a class="list-group-item" href="">2位 James</a>
+                            <a class="list-group-item" href="">3位 Lina</a>
+                            <a class="list-group-item" href="">4位 Tailer</a>
+                            <a class="list-group-item" href="">5位 hoge</a>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab4">
+                        <div class="list-group">
+                            <a class="list-group-item" href="">1位 個の成長</a>
+                            <a class="list-group-item" href="">2位 関係者全員の幸福の追求</a>
+                            <a class="list-group-item" href="">3位 顧客の創造の維持</a>
+                            <a class="list-group-item" href="">4位 ノアの方舟</a>
+                            <a class="list-group-item" href="">5位 ヒカリエ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<p>
-    <%= @question.description %>
-</p>
-
-<p>
-    <%= @question.code %>
-</p>
-
-<button>回答する</button>
-
-<% @question.answers.each do |answer| %>
-    <p>
-	<%= answer.user.icon_url %>
-        <%= answer.user.name %>
-        <%= answer.body %>
-        <button>イイネ！</button>
-        <%= answer.like %>
-        <%= form_for :comments do |f| %>
-	    <p>
-	        <%= f.text_area :body %>
-            </p>
-            <p>
- 		<%= f.submit %>
-	    </p>
-	<% end %>
-    </p>
-<% end %>
-
-<h2>回答フォーム</h2>
-<%= form_for([@question, @question.answers.build]) do |f| %>
-<p>
-    <%= f.text_field :body %>
-</p>
-<p>
-    <%= f.submit '投稿' %>
-</p>
-<% end %>   

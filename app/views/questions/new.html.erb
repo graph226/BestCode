@@ -1,8 +1,9 @@
 <%= form_for :question, url: questions_path do |f| %>
-<div class="container" style="margin-top: 60px;">
+    <div class="container" style="margin-top: 60px;">
+        <h1>質問を入力してください！</h1>
 		  <p>
 		    <%= f.label :title ,id:"hoge"%>
-		    <%= f.text_field :title %>
+		    <%= f.text_field :title , class:"form-control col-md-6", rows:"1"%>
 		  </p>
 		
 			<div class="form-group">
